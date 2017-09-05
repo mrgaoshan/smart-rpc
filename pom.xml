@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.smartRPC</groupId>
-	<artifactId>rpc</artifactId>
-	<version>1.0</version>
-	<name>smart rpc</name>
+    <groupId>com.smartRPC</groupId>
+    <artifactId>rpc</artifactId>
+    <version>1.0</version>
+    <name>smart rpc</name>
     <packaging>pom</packaging>
 
 
@@ -53,7 +53,7 @@
             <version>1.7.7</version>
         </dependency>
 
-<!-- Spring -->
+        <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -67,14 +67,14 @@
             <scope>test</scope>
         </dependency>
 
-<!-- Netty -->
+        <!-- Netty -->
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
             <version>4.1.6.Final</version>
         </dependency>
 
-<!-- Protostuff -->
+        <!-- Protostuff -->
         <dependency>
             <groupId>com.dyuproject.protostuff</groupId>
             <artifactId>protostuff-core</artifactId>
@@ -128,7 +128,7 @@
         </dependency>
 
 
-	</dependencies>
+    </dependencies>
 
     <build>
         <plugins>
@@ -157,14 +157,13 @@
     </build>
 
 
-
     <modules>
         <module>rpc-common</module>
 
         <module>rpc-server</module>
-        <!--  <module>rpc-client</module>-->
-      <module>rpc-registry</module>
-      <module>rpc-registry-zookeeper</module>
+        <module>rpc-client</module>
+        <module>rpc-registry</module>
+        <module>rpc-registry-zookeeper</module>
     </modules>
 
 </project>
