@@ -32,8 +32,8 @@ public class RpcDecoder extends ByteToMessageDecoder {
             in.resetReaderIndex();
             return;
         }
-        byte[] data = new byte[dataLength];
+        byte[] data = new byte[dataLength];  //二级制Byte 数组
         in.readBytes(data);
-        out.add(SerializationUtil.deserialize(data, genericClass));
+        out.add(SerializationUtil.deserialize(data, genericClass));  //反序列化，把字节转为对象
     }
 }

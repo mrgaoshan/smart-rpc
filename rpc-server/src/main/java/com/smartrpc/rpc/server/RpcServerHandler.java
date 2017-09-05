@@ -35,8 +35,8 @@ public class RpcServerHandler extends SimpleChannelInboundHandler<RpcRequest> {
         RpcResponse response = new RpcResponse();
         response.setRequestId(request.getRequestId());
         try {
-            Object result = handle(request);
-            response.setResult(result);
+            Object result = handle(request);  //通过反射获取调用结果Object
+            response.setResult(result);     //放入到 RpcResponse,通过管道序列化
         } catch (Exception e) {
             LOGGER.error("handle result failure", e);
             response.setException(e);
@@ -45,6 +45,12 @@ public class RpcServerHandler extends SimpleChannelInboundHandler<RpcRequest> {
         ctx.writeAndFlush(response).addListener(ChannelFutureListener.CLOSE);
     }
 
+    /**
+     * 通过cglib 反射调用 类的方法，返回结果
+     * @param request
+     * @return
+     * @throws Exception
+     */
     private Object handle(RpcRequest request) throws Exception {
         // 获取服务对象
         String serviceName = request.getInterfaceName();

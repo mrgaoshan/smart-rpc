@@ -87,9 +87,9 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
             bootstrap.childHandler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 public void initChannel(SocketChannel channel) throws Exception {
-                    ChannelPipeline pipeline = channel.pipeline();
-                    pipeline.addLast(new RpcDecoder(RpcRequest.class)); // 解码 RPC 请求
-                    pipeline.addLast(new RpcEncoder(RpcResponse.class)); // 编码 RPC 响应
+                    ChannelPipeline pipeline = channel.pipeline();  //ChannelPipeline可以理解成一个消息（ 或消息事件，ChanelEvent）流转的通道，在这个通道中可以被附上许多用来处理消息的handler
+                    pipeline.addLast(new RpcDecoder(RpcRequest.class)); // 解码 RPC 请求 ，反序列化
+                    pipeline.addLast(new RpcEncoder(RpcResponse.class)); // 编码 RPC 响应，序列化
                     pipeline.addLast(new RpcServerHandler(handlerMap)); // 处理 RPC 请求
                 }
             });
