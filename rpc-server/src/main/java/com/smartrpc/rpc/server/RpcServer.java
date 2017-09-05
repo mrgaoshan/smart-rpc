@@ -5,7 +5,7 @@ import com.smartrpc.rpc.common.bean.RpcResponse;
 import com.smartrpc.rpc.common.codec.RpcDecoder;
 import com.smartrpc.rpc.common.codec.RpcEncoder;
 import com.smartrpc.rpc.common.util.StringUtil;
-import com.smartrpc.rpc.registry.ServiceRegistry;
+import com.smartrpc.rpc.registry.discovery.ServiceRegistry;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;

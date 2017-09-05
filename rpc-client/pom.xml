@@ -24,7 +24,7 @@
         <!-- RPC Registry with ZooKeeper -->
         <dependency>
             <groupId>com.smartRPC</groupId>
-            <artifactId>rpc-registry-zookeeper</artifactId>
+            <artifactId>rpc-registry-discovery-zookeeper</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>

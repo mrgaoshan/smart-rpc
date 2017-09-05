@@ -1,4 +1,4 @@
-package com.smartrpc.rpc.registry.zookeeper;
+package com.smartrpc.rpc.registry.discovery.zookeeper;
 
 /**
  * 常量

@@ -1,6 +1,6 @@
-package com.smartrpc.rpc.registry.zookeeper;
+package com.smartrpc.rpc.registry.discovery.zookeeper;
 
-import com.smartrpc.rpc.registry.ServiceRegistry;
+import com.smartrpc.rpc.registry.discovery.ServiceRegistry;
 import org.I0Itec.zkclient.ZkClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

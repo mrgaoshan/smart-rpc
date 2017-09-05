@@ -1,4 +1,4 @@
-package com.smartrpc.rpc.registry;
+package com.smartrpc.rpc.registry.discovery;
 
 /**
  * 服务注册接口

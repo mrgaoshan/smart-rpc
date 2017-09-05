@@ -12,7 +12,7 @@
     <context:property-placeholder location="classpath:rpc.properties"/>
 
     <!--配合服务注册组件 -->
-    <bean id="serviceRegistry" class="com.smartrpc.rpc.registry.zookeeper.ZooKeeperServiceRegistry">
+    <bean id="serviceRegistry" class="com.smartrpc.rpc.registry.discovery.zookeeper.ZooKeeperServiceRegistry">
         <constructor-arg name="zkAddress" value="${rpc.registry_address}"/>
     </bean>
 

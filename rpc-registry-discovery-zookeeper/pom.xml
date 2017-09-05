@@ -12,7 +12,7 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>rpc-registry-zookeeper</artifactId>
+    <artifactId>rpc-registry-discovery-zookeeper</artifactId>
 
     <dependencies>
 
@@ -25,7 +25,7 @@
         <!-- RPC Registry -->
         <dependency>
             <groupId>com.smartRPC</groupId>
-            <artifactId>rpc-registry</artifactId>
+            <artifactId>rpc-registry-discovery</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>

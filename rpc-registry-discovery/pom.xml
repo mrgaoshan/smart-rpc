@@ -12,6 +12,6 @@
         <version>1.0</version>
     </parent>
 
-    <artifactId>rpc-registry</artifactId>
+    <artifactId>rpc-registry-discovery</artifactId>
 
 </project>

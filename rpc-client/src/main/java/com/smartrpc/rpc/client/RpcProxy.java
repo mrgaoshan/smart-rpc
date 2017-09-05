@@ -3,7 +3,7 @@ package com.smartrpc.rpc.client;
 import com.smartrpc.rpc.common.bean.RpcRequest;
 import com.smartrpc.rpc.common.bean.RpcResponse;
 import com.smartrpc.rpc.common.util.StringUtil;
-import com.smartrpc.rpc.registry.ServiceDiscovery;
+import com.smartrpc.rpc.registry.discovery.ServiceDiscovery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
