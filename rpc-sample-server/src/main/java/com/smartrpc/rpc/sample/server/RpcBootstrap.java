@@ -1,4 +1,4 @@
-package com.xxx.rpc.sample.server;
+package com.smartrpc.rpc.sample.server;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

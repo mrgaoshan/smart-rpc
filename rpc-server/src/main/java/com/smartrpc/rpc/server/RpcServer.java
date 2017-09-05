@@ -100,8 +100,8 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
             String ip = addressArray[0];
             int port = Integer.parseInt(addressArray[1]);
             // 启动 RPC 服务器
-            ChannelFuture future = bootstrap.bind(ip, port).sync();
-            // 注册 RPC 服务地址
+            ChannelFuture future = bootstrap.bind(ip, port).sync();  //线程同步阻塞等待服务器绑定到指定端口
+            // 注册 RPC 服务地址，通过zookeeper 注册
             if (serviceRegistry != null) {
                 for (String interfaceName : handlerMap.keySet()) {
                     serviceRegistry.register(interfaceName, serviceAddress);
@@ -109,7 +109,7 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
                 }
             }
             LOGGER.debug("server started on port {}", port);
-            // 关闭 RPC 服务器
+            // 关闭 RPC 服务器 ，成功绑定到端口之后,给channel增加一个 管道关闭的监听器并同步阻塞,直到channel关闭,线程才会往下执行,结束进程。
             future.channel().closeFuture().sync();
         } finally {
             workerGroup.shutdownGracefully();
