@@ -1,4 +1,4 @@
-package com.smartrpc.rpc.sample.client;
+package com.smartrpc.rpc.sample.client.Controller;
 
 import com.smartrpc.rpc.client.RpcProxy;
 import com.smartrpc.rpc.sample.api.HelloService;

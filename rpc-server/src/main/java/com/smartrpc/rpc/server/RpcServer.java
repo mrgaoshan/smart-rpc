@@ -112,6 +112,7 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
             LOGGER.debug("server started on port {}", port);
             // 关闭 RPC 服务器 ，成功绑定到端口之后,给channel增加一个 管道关闭的监听器并同步阻塞,直到channel关闭,线程才会往下执行,结束进程。
             future.channel().closeFuture().sync();
+            LOGGER.debug("Close server port :"+port);
         } finally {
             workerGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();

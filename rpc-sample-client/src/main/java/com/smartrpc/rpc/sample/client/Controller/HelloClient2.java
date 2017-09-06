@@ -1,23 +1,20 @@
-package com.smartrpc.rpc.sample.client;
+package com.smartrpc.rpc.sample.client.Controller;
 
 import com.smartrpc.rpc.client.RpcProxy;
 import com.smartrpc.rpc.sample.api.HelloService;
+import com.smartrpc.rpc.sample.api.Person;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class HelloClient {
+public class HelloClient2 {
 
     public static void main(String[] args) throws Exception {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         RpcProxy rpcProxy = context.getBean(RpcProxy.class);
 
         HelloService helloService = rpcProxy.create(HelloService.class);
-        String result = helloService.hello("World");
+        String result = helloService.hello(new Person("gao", "shan"));
         System.out.println(result);
-
-        HelloService helloService2 = rpcProxy.create(HelloService.class, "sample.hello2");
-        String result2 = helloService2.hello("世界");
-        System.out.println(result2);
 
         System.exit(0);
     }
