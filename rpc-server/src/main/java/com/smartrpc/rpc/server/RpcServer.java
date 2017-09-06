@@ -69,6 +69,7 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
                 if (StringUtil.isNotEmpty(serviceVersion)) {
                     serviceName += "-" + serviceVersion;
                 }
+                LOGGER.debug("handlerMap put :" +"serviceName:" +serviceName +",serviceBean"+serviceBean);
                 handlerMap.put(serviceName, serviceBean);
             }
         }

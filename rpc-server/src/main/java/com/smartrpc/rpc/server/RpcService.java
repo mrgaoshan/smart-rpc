@@ -2,10 +2,7 @@ package com.smartrpc.rpc.server;
 
 import org.springframework.stereotype.Component;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * RPC 服务注解（标注在服务实现类上）
@@ -15,6 +12,7 @@ import java.lang.annotation.Target;
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
+@Documented
 @Component
 public @interface RpcService {
 
