@@ -1,4 +1,4 @@
-# smart-rpc
+# smart-rpc 基于Springboot+zookeepr 分布式RPC框架
 
 
 ### 主要用到的组件
