@@ -3,13 +3,20 @@
 
 ### 主要用到的组件
 
-Spring  
+Spring-boot;
 
 Netty：它使 NIO 编程更加容易，屏蔽了 Java 底层的 NIO 细节。  
 
 Protostuff：它基于 Protobuf 序列化框架，面向 POJO，无需编写 .proto 文件。  
 
 ZooKeeper：提供服务注册与发现功能，开发分布式系统的必备选择，同时它也具备天生的集群能力。  
+
+### 各个模块说明
+
+ rpc-sample-api:定义RPC服务的接口 （如：HelloService）.   
+ rpc-sample-provider : 实现 rpc-sample-api ,对外提供服务.  
+ rpc-sample-client:  调用远程服务，即 rpc-sample-provider 提供的服务. 
+  
 
 
 ### 实现流程以及步骤
