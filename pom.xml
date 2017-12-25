@@ -163,6 +163,10 @@
         <module>rpc-client</module>
         <module>rpc-registry-discovery</module>
         <module>rpc-registry-discovery-zookeeper</module>
+
+        <module>rpc-sample-api</module>
+        <module>rpc-sample-provider</module>
+        <module>rpc-sample-client</module>
     </modules>
 
 </project>
