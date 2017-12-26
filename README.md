@@ -37,6 +37,6 @@ ZooKeeper：提供服务注册与发现功能，开发分布式系统的必备�
 
 ### 流程图
 
-![流程图](https://github.com/mrgaoshan/smart-rpc/edit/master/rpc-sample-api.png)
+![](https://github.com/mrgaoshan/smart-rpc/raw/master/rpc-sample-api.png)
 
 
