@@ -26,6 +26,8 @@ ZooKeeper：提供服务注册与发现功能，开发分布式系统的必备�
 ------
 ### 如何使用：
 
+#### 0.   使用maven打包 smart-rpc pom.xml ， mvn clean install package.
+
 #### 1.   rpc-smaple-provider, 修改appllcation.properties  定义服务的端口，zookeeper的地址 ，启动 RpcBootStrapApplication. 发布服务
 
 #### 2.   rpc-sample-client , 修改appllcation.properties  定义服务起的端口，zookeeper的地址 ，启动 ClientApplication.  调用服务
